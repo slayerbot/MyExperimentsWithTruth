@@ -10,6 +10,9 @@
     <ClCompile Include="source\stdafx.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="source\linklist.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers\stdafx.h">
@@ -19,6 +22,9 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="headers\MyStringLib.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\linklist.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

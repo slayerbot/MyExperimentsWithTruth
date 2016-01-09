@@ -101,7 +101,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeader>Create</PrecompiledHeader>
-      <AdditionalIncludeDirectories>D:\MyExperimentsWithTruth\POC\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,11 +146,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="headers\linklist.h" />
     <ClInclude Include="headers\MyStringLib.h" />
     <ClInclude Include="headers\stdafx.h" />
     <ClInclude Include="headers\targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\linklist.cpp" />
     <ClCompile Include="source\MyStringLib.cpp" />
     <ClCompile Include="source\POC.cpp" />
     <ClCompile Include="source\stdafx.cpp" />

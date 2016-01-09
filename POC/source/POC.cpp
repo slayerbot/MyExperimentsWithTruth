@@ -2,7 +2,7 @@
 //
 #include "stdafx.h"
 #include "MyStringLib.h"
-
+#include "linklist.h"
 
 void intArrayrev(int *in, int len)
 {
@@ -54,26 +54,43 @@ int Factor(int n)
 
 int main()
 {
-	char str[] = "John meets and says hi to Jill";
+	////////////////////////////////////////////////////////////
+	//   LIST TESTS
+	////////////////////////////////////////////////////////////
 
+
+	////////////////////////////////////////////////////////////
+	//   STRING TESTS
+	////////////////////////////////////////////////////////////
 	MyStringLib oStrLib;
 
-	char *res = oStrLib.MyReplaceStr(str, "meets and says hi", "gives book");
+	char str[] = "John meets and says hi to Jill";
+	cout << "Original string: " << endl << str << endl;
+
+	//strlen
 	printf("Length of given string: %d\n", oStrLib.Mystrlen(str));
 
-	oStrLib.Mystrrev(str);
-	cout << "reversed string: " << endl << str << endl;
-
-	char *des = (char *) malloc(sizeof(char) * strlen(str));
+	//strcpy
+	char *des = (char *)malloc(sizeof(char) * strlen(str));
 	oStrLib.Mystrcpy(str, des);
 	cout << "Copied String:" << endl << des << endl;
 
-	des = oStrLib.Mystrstr(str, "OMP");
+	// Replace substring
+	char *res = oStrLib.MyReplaceStr(str, "meets and says hi", "gives book");
+	cout << "string after replacing sbstrings: " << endl << res << endl;
+
+	// Find sub string "strstr"
+	des = oStrLib.Mystrstr(str, "book");
 	if (des)
 		cout << "sub String found " << endl << des << endl;
 	else
 		cout << "sub string not found " << endl;
 
+	// strrev
+	oStrLib.Mystrrev(str);
+	cout << "reversed string: " << endl << str << endl;
+
+	//Palindrome
 	char strP[] = "Malayalam";
 	if (oStrLib.IsPalindrome(strP))
 		cout << "yay its palindrome" << endl;
@@ -82,25 +99,30 @@ int main()
 
 
 
-	//cout << "Factorial of: ";
-	//int no;
-	//cin >> no;
-	////int fact = Factorial(no);
-	//cout << "factorial is :" << endl;
-	//printf("%d", Factor(no));
+	//////////////////////////////////////////////////
+	//   OTHER TESTS
+	//////////////////////////////////////////////////
+
+	// Factorial
+	cout << "Factorial of: ";
+	int no;
+	cin >> no;
+	//int fact = Factorial(no);
+	cout << "factorial is :" << endl;
+	printf("%d", Factor(no));
 	
-	/*cout << "enter the no of terms for series" << endl;
+	// Fibonacci
+	cout << "enter the no of terms for series" << endl;
 	int terms;
 	cin >> terms;
-	Fib(terms); */
+	Fib(terms); 
 
-
-/*
+	// reverse int array
 	int i[] = { 1,2,3,4,5 };
 	int len = sizeof(i) / sizeof(i[0]);
 	cout << "len: " << len << endl;
 	intArrayrev(i, len);
-	cout << "rev int: " << i << endl;*/
+	cout << "rev int: " << i << endl;
 
 	return 0;
 }

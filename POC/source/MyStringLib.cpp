@@ -28,13 +28,15 @@ char * MyStringLib::Mystrcpy(const char * src, char * des)
 void MyStringLib::Mystrrev(char *str)
 {
 	if (str == NULL) return;
-
-	char *j = str;
+	
 	int len = static_cast<int>(strlen(str));
+	
 	char *i = str;
-	char tmp;
+	char *j = str;
+	// j pointing to last element in array
 	j = j + len -1;
 
+	char tmp;
 	while (j>i) {
 		tmp = *i;
 		*i = *j;
