@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="source\MyStringLib.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\POC.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\stdafx.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\stdafx.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\targetver.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\MyStringLib.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{44b04df3-8eb5-40b8-9d09-593dcf879921}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{b1ec38d6-a675-431c-9092-c2dc29d41bd9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
